@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Layouts css</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/> 
+<style>
+.item1 { grid-area:  Logo; text-align: center; text-align:left; }
+.item2 { grid-area:  item1; }
+.item3 { grid-area:  item2; }
+.item4 { grid-area:  item3; }
+.item5 { grid-area:  item4; }
+.item6 { grid-area:  item5; }
+.item7 { grid-area:  item6; }
+.item8 { grid-area:  item7; }
+.item9 { grid-area:  item8; }
+.item10 { grid-area: item9; }
+.item11 { grid-area: item10; }
+.item12 { grid-area: item11; }
+.item13 { grid-area: item12; }
+.item14 { grid-area: item13; }
+.item15 { grid-area: item14; }
+.item16 { grid-area: item15; }
+.item17 { grid-area: item16; }
+.item18 { grid-area: Box1;display: flex;justify-content: center; }
+.item19 { grid-area: Box2;display: flex;justify-content: center; }
+.item20 { grid-area: Box3;display: flex;justify-content: center; }
+.item21 { grid-area: Footer;display: flex;justify-content: center; }
+
+.grid-container {
+  display: grid;
+ grid-template: 
+'Logo Logo Logo Logo' minmax(70px,30px) 
+'item1 item2 item3 item4' minmax(70px,30px) 
+'item5 item6 item7 item8' minmax(70px,30px) 
+'item9 item10 item11 item12' minmax(70px,30px) 
+'item13 item14 item15 item16' minmax(70px,30px)
+'Box1 Box2 Box3 Box4' minmax(100px,100px) 
+'Footer Footer Footer Footer' minmax(70px,50px);
+  gap: 10px;
+  background-color:#f1f1f131;
+  padding: 30px;
+}
+
+.grid-container > div {
+  background-color:#F1F1F1;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="item1">Logo Navegation</div>
+      <div class="item2"></div>
+      <div class="item3"></div>
+      <div class="item4"></div>
+      <div class="item5"></div>
+      <div class="item6"></div>
+      <div class="item7"></div>
+      <div class="item8"></div>
+      <div class="item9"></div>
+      <div class="item10"></div>
+      <div class="item11"></div>
+      <div class="item12"></div>
+      <div class="item13"></div>
+      <div class="item14"></div>
+      <div class="item15"></div>
+      <div class="item16"></div>
+      <div class="item17"></div>
+      <div class="item18">Box1</div>
+      <div class="item19">Box2</div>
+      <div class="item20">Box3</div>
+      <div class="item21">Footer</div>
+</div>
+</body>
+</html>

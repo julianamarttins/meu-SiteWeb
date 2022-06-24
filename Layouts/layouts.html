@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Layouts css</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/> 
+<style>
+.item1 { grid-area: Logo; text-align: center; }
+.item2 { grid-area: Header;display: flex;justify-content: center; text-align: right; }
+.item3 { grid-area: Intro;display: flex;justify-content: center; }
+.item4 { grid-area: Box1;display: flex;justify-content: center; }
+.item5 { grid-area: Box2;display: flex;justify-content: center; }
+.item6 { grid-area: Box3;display: flex;justify-content: center; }
+.item7 { grid-area: Footer;display: flex;justify-content: center; }
+.grid-container {
+  display: grid;
+ grid-template: 
+'Logo Logo Logo' minmax(50px,10px) 
+'Header Header  Header' minmax(70px,10px)
+'Intro Intro Intro' minmax(50px,10px)
+'Box1 Box2 Box3' minmax(200px,300px)
+'Footer Footer Footer' minmax(70px,50px);
+  gap: 10px;
+  background-color:#f1f1f131;
+  padding: 10px;
+  text-align: center;
+
+
+}
+
+.grid-container > div {
+  background-color:#F1F1F1;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="item1">Logo navegation </div>
+      <div class="item2">Header/ Banner</div>
+      <div class="item3">Intro Texto Area</div>
+      <div class="item4">Box1</div>
+      <div class="item5">Box2</div>
+      <div class="item6">Box3</div>
+      <div class="item7">Footer</div>
+</div>
+</body>
+</html>

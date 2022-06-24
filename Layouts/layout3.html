@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Layouts css</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+<style>
+.item1 { grid-area: Logo;text-align: center; text-align:left; border: 10px; }
+.item2 { grid-area: Side bar Navegation;display:flex;justify-content: center; }
+.item3 { grid-area: Banner;display:flex;justify-content: center; }
+.item4 { grid-area: Body;display:flex;justify-content: center; }
+.item5 { grid-area: Footer;display:flex;justify-content: center; }
+.grid-container {
+  display: grid;
+ grid-template: 
+    'Logo Logo Logo' minmax(50px,20px) 
+    'Side Side Side' minmax(50px,20px)
+    'Header Banner Banner' minmax(100px,50px)
+    'Area Body Body' minmax(300px,200px)
+    'Footer Footer Footer' minmax(50px,10px);
+  gap: 10px;
+  background-color:rgba(255, 255, 255, 0.8);
+  padding: 10px;
+
+}
+
+.grid-container > div {
+  background-color:#F1F1F1;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="item1">Logo</div>
+      <div class="item2">Side bar Navegation</div> 
+      <div class="item3">Header Banner</div> 
+      <div class="item4">Body Area</div>
+      <div class="item5">Footer</div>
+</div>
+</body>
+</html>

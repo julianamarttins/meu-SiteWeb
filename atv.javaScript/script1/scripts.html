@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>questão 2</title>
+    </head>
+    <body>
+        <div class="principal">
+            <div class="tipo_suco">
+                <label for="id1">quantos litros de refresco deseja fazer?</label>
+                <input id="id1" type="number" min="0" max="300" required>
+                <p>escolha o tipo de suco:</p>
+                <input type="radio" name="suco" id="fruta1">macarujá
+                <input type="radio" name="suco"id="fruta2">caju
+                <input type="radio" name="suco"id="fruta3">goiaba
+            </div>
+            <div class="itens_extras">
+                <p>Itens extras a utilizar:</p>
+                <input type="checkbox"id="acucar">açucar
+                <input type="checkbox"id="gelo">gelo
+            </div>
+            <div class="botoes">
+                <br>
+                <input type="button" value ="calculo" onclick ="calculo()">
+                <input type="button" value ="novo" onclick="window.location.reload()">
+                <br>
+            </div>
+            <div class="resultado">
+                <p>
+                    <span id="span_agua"> Agua: </span> <span id="span_suco">Suco: </span>
+                </p>
+            </div>
+        </div>
+        <script>
+            function calculo() {
+                var litro = parseInt(id1.value)
+               
+                var sucoMaracuja = document.getElementById('fruta1')
+                var sucoCaju = document.getElementById('fruta2')
+                var sucoGoiaba = document.getElementById('fruta3')
+
+                var acucar = document.getElementById('acucar')
+                var gelo = document.getElementById('gelo')
+                var agua
+                var suco 
+                var reducao=0  
+                if(sucoMaracuja.checked){
+                     agua = 6
+                     suco = 4
+                }
+                if(sucoCaju.checked){
+                     agua = 8
+                     suco = 2
+                }
+                if(sucoGoiaba.checked){
+                     agua = 5
+                     suco = 5
+                }
+                if(acucar.checked){
+                    reducao+=2/100
+                }
+                if(gelo.checked){
+                    reducao += 5/100
+                }
+                agua=agua*(1-reducao)
+                document.getElementById('span_agua').textContent = 'Agua: '+(agua*litro).toFixed(2) + ' partes'
+                document.getElementById('span_suco').textContent = 'Suco: '+(suco*litro).toFixed(2) + ' partes'
+            }
+       </script>
+    </body>
+</html>

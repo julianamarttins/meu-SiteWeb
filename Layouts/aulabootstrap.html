@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Layouts css</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+<style>
+.item1 { grid-area: Logo;text-align: left; }
+.item2 { grid-area: Navegation;display:flex;justify-content: center; }
+.item3 { grid-area: Header;display:flex;justify-content: center; }
+.item4 { grid-area: Side;display:flex;justify-content: center; }
+.item5 { grid-area: Body;display:flex;justify-content: center; }
+.item6 { grid-area: Footer;display:flex;justify-content: center; }
+.grid-container {
+  display: grid;
+ grid-template: 
+    'Logo Logo Logo' minmax(100px,20px) 
+    'Navegation Navegation Navegation' minmax(50px,20px)
+    'Header Header Header' minmax(100px,50px)
+    'Side Body Body' minmax(400px,400px)
+    'Footer Footer Footer' minmax(50px,10px);
+  gap: 10px;
+  background-color:white;
+  padding: 10px;
+
+}
+
+.grid-container > div {
+  background-color:#F1F1F1;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="item1">Logo</div>
+      <div class="item2">Navegation</div>
+      <div class="item3">Header</div>  
+      <div class="item4">Side</div>
+      <div class="item5">Body</div>
+      <div class="item6">Footer</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

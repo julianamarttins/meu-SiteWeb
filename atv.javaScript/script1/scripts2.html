@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao 1</title>
+</head>
+<body>
+    <div class ="principal">
+        <label>Capacidade do tanque de combustivel:</label>
+        <input id="combustivel"  type="number">
+        <br>
+        <br>
+        <label> Valor  que tem para gastar:</label>
+        <input id="valor"  type="number">
+
+    </div>
+    <div class="radio">
+        <input type="radio" name="suco" id="Alcool">Alcool
+        <input type="radio" name="suco"id="Gasolina">Gasolina
+    </div>
+    <br>
+    <div class="botoes">
+        <input type="button" value ="calcular" onclick ="calcular()">
+        <input type="button" value ="novo"  onclick="window.location.reload()">
+    </div>
+    <div class="resultado">
+        <span id="span_resultado"> Voce pode comprar:</span>
+    </div>
+    <script>
+        function calcular() {
+                var capacidadeCombustivel = parseInt(combustivel.value)
+                var valorInserido = parseInt(valor.value)
+                var Alcool = document.getElementById('Alcool')
+                var Gasolina = document.getElementById('Gasolina')
+                var litros
+                if(Alcool.checked){
+                     litros = valorInserido/3.96
+                }
+                if(Gasolina.checked){
+                    litros = valorInserido/4.75
+                }
+                document.getElementById('span_resultado').textContent = 'Voce pode comprar: ' + litros.toFixed(2)
+                if( capacidadeCombustivel < litros){
+                    alert('Voce nao conseguira comprar '+  litros.toFixed(2)+' litros pois a capacidade do seu tanque é'+ capacidadeCombustivel)                } 
+
+            }
+    </script>
+</body>
+</html>
